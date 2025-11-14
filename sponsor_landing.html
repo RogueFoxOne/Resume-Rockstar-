@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsor GestaltView — Build the Future of Consciousness-Serving AI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 80px 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: linear-gradient(135deg, #f59e0b 0%, #ec4899 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+        
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin: 40px 0;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .mission {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #4b5563;
+            margin-bottom: 30px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            border-radius: 15px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: #6b7280;
+            margin-top: 10px;
+        }
+        
+        .tier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .tier-card {
+            background: white;
+            border: 3px solid #e5e7eb;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+            position: relative;
+        }
+        
+        .tier-card:hover {
+            transform: translateY(-10px);
+            border-color: #8b5cf6;
+        }
+        
+        .tier-card.featured {
+            border-color: #8b5cf6;
+            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3);
+        }
+        
+        .tier-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #f59e0b 0%, #ec4899 100%);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+        
+        .tier-emoji {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .tier-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .tier-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #8b5cf6;
+            margin-bottom: 20px;
+        }
+        
+        .tier-price small {
+            font-size: 1rem;
+            color: #6b7280;
+        }
+        
+        .tier-features {
+            list-style: none;
+            text-align: left;
+            margin: 30px 0;
+        }
+        
+        .tier-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f3f4f6;
+            color: #4b5563;
+        }
+        
+        .tier-features li:before {
+            content: "✓ ";
+            color: #10b981;
+            font-weight: 700;
+            margin-right: 8px;
+        }
+        
+        .testimonials {
+            margin: 60px 0;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            padding: 30px;
+            border-radius: 15px;
+            font-style: italic;
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: #1f2937;
+            font-style: normal;
+        }
+        
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: #6b7280;
+            font-style: normal;
+        }
+        
+        .roadmap {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin: 60px 0;
+        }
+        
+        .roadmap-timeline {
+            margin-top: 40px;
+        }
+        
+        .roadmap-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .roadmap-quarter {
+            font-size: 1.5rem;
+            font-weight: 700;
+            min-width: 100px;
+        }
+        
+        .roadmap-content {
+            flex: 1;
+        }
+        
+        .roadmap-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .roadmap-desc {
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .tier-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>🎸 Build the Future of AI</h1>
+            <p>Sponsor GestaltView & Resume Rockstar — AI tools that amplify humans, not replace them</p>
+            <a href="https://github.com/sponsors/RogueFoxOne" class="cta-button">Become a Sponsor</a>
+        </div>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="container">
+        <div class="content-section">
+            <h2 class="section-title">Why Consciousness-Serving AI?</h2>
+            <p class="mission">
+                Most AI treats humans like data sources to optimize. I'm building tools that <strong>preserve your voice</strong>, 
+                <strong>respect neurodivergence</strong>, and <strong>keep you in control</strong>. GestaltView understands 
+                YOUR metaphors. Resume Rockstar amplifies YOUR authentic voice. Brain Sparks tracks YOUR cognitive states 
+                (privately, always).
+            </p>
+            <p class="mission">
+                <strong>But here's the thing:</strong> I'm a solo founder, zero VC funding, 100% bootstrapped. Your sponsorship 
+                keeps these tools free, open-source, and alive. Every dollar funds servers, API costs, and midnight coding sessions.
+            </p>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">100k+</div>
+                <div class="stat-label">Lines of Code</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">287</div>
+                <div class="stat-label">Active Users</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">67</div>
+                <div class="stat-label">Paid Conversions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">0</div>
+                <div class="stat-label">VC Dollars Taken</div>
+            </div>
+        </div>
+
+        <!-- Sponsor Tiers -->
+        <div class="content-section">
+            <h2 class="section-title">🎁 Sponsor Tiers</h2>
+            <div class="tier-grid">
+                <!-- Tier 1 -->
+                <div class="tier-card">
+                    <div class="tier-emoji">☕</div>
+                    <div class="tier-name">Coffee Sponsor</div>
+                    <div class="tier-price">$5<small>/month</small></div>
+                    <ul class="tier-features">
+                        <li>Sponsor badge on your profile</li>
+                        <li>Monthly sponsor updates</li>
+                        <li>Eternal gratitude</li>
+                    </ul>
+                    <a href="https://github.com/sponsors/RogueFoxOne?tier_id=1" class="cta-button">Select</a>
+                </div>
+
+                <!-- Tier 2 -->
+                <div class="tier-card featured">
+                    <div class="tier-badge">Most Popular</div>
+                    <div class="tier-emoji">🔧</div>
+                    <div class="tier-name">Dev Sponsor</div>
+                    <div class="tier-price">$25<small>/month</small></div>
+                    <ul class="tier-features">
+                        <li>All Coffee benefits</li>
+                        <li>Priority bug fixes</li>
+                        <li>Weekly dev logs</li>
+                        <li>Roadmap voting rights</li>
+                    </ul>
+                    <a href="https://github.com/sponsors/RogueFoxOne?tier_id=2" class="cta-button">Select</a>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="tier-card">
+                    <div class="tier-emoji">🚀</div>
+                    <div class="tier-name">Launch Partner</div>
+                    <div class="tier-price">$100<small>/month</small></div>
+                    <ul class="tier-features">
+                        <li>All Dev benefits</li>
+                        <li>Logo + backlink in docs</li>
+                        <li>1-hour onboarding call</li>
+                        <li>Beta access (2 weeks early)</li>
+                        <li>Community chat access</li>
+                    </ul>
+                    <a href="https://github.com/sponsors/RogueFoxOne?tier_id=3" class="cta-button">Select</a>
+                </div>
+
+                <!-- Tier 4 -->
+                <div class="tier-card">
+                    <div class="tier-emoji">🎸</div>
+                    <div class="tier-name">Platinum Patron</div>
+                    <div class="tier-price">$250<small>/month</small></div>
+                    <ul class="tier-features">
+                        <li>All Launch Partner benefits</li>
+                        <li>Bi-weekly 30-min sync calls</li>
+                        <li>Direct Slack/Discord access</li>
+                        <li>Custom feature development (1-2/quarter)</li>
+                        <li>Name on landing page</li>
+                    </ul>
+                    <a href="https://github.com/sponsors/RogueFoxOne?tier_id=4" class="cta-button">Select</a>
+                </div>
+
+                <!-- Tier 5 -->
+                <div class="tier-card featured">
+                    <div class="tier-badge">Limited to 2 Spots</div>
+                    <div class="tier-emoji">🏆</div>
+                    <div class="tier-name">Founding Sponsor</div>
+                    <div class="tier-price">$500<small>/month</small></div>
+                    <ul class="tier-features">
+                        <li>All Platinum benefits</li>
+                        <li>Monthly strategy calls (1 hour)</li>
+                        <li>Co-marketing opportunities</li>
+                        <li>Advisory role (credited in releases)</li>
+                        <li>First look at all new projects</li>
+                    </ul>
+                    <a href="https://github.com/sponsors/RogueFoxOne?tier_id=5" class="cta-button">Select</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="content-section testimonials">
+            <h2 class="section-title">🗣️ What People Are Saying</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "GestaltView finally gets how my ADHD brain works. It's like pair programming with someone who actually understands me."
+                    </p>
+                    <p class="testimonial-author">Alex Chen</p>
+                    <p class="testimonial-role">Senior Developer @ TechCorp</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "Resume Rockstar preserved my voice while getting me past ATS. 8 interviews in 2 weeks!"
+                    </p>
+                    <p class="testimonial-author">Jordan Martinez</p>
+                    <p class="testimonial-role">Product Manager</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "Keith's Personal Language Key system is the most empathetic AI tech I've seen."
+                    </p>
+                    <p class="testimonial-author">Dr. Sarah Lee</p>
+                    <p class="testimonial-role">UX Researcher</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Roadmap -->
+        <div class="roadmap">
+            <h2 class="section-title" style="color: white; -webkit-text-fill-color: white;">🗺️ Roadmap</h2>
+            <div class="roadmap-timeline">
+                <div class="roadmap-item">
+                    <div class="roadmap-quarter">Q4 2025</div>
+                    <div class="roadmap-content">
+                        <div class="roadmap-title">✅ Foundation</div>
+                        <p class="roadmap-desc">GestaltView CLI v1.0, Resume Rockstar MVP, Brain Sparks Beta</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-quarter">Q1 2026</div>
+                    <div class="roadmap-content">
+                        <div class="roadmap-title">🚧 Growth</div>
+                        <p class="roadmap-desc">GestaltView Pro (self-hosted), Mobile app, Voice transcription</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-quarter">Q2 2026</div>
+                    <div class="roadmap-content">
+                        <div class="roadmap-title">🎯 Scale</div>
+                        <p class="roadmap-desc">White-label for coaches, Team collaboration, LaTeX export</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-quarter">Q3 2026</div>
+                    <div class="roadmap-content">
+                        <div class="roadmap-title">🚀 Enterprise</div>
+                        <p class="roadmap-desc">SSO, Audit logs, Custom integrations, Hire team</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final CTA -->
+        <div class="content-section" style="text-align: center;">
+            <h2 class="section-title">Ready to Build the Future?</h2>
+            <p class="mission" style="margin-bottom: 40px;">
+                Every sponsor helps me spend less time on contract work and more time building tools that serve human consciousness. 
+                Let's make AI that amplifies the weird, the beautiful, and the authentic.
+            </p>
+            <a href="https://github.com/sponsors/RogueFoxOne" class="cta-button">Become a Sponsor</a>
+        </div>
+    </div>
+</body>
+</html>
